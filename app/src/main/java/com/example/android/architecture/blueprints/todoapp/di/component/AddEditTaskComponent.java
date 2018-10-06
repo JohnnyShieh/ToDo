@@ -1,5 +1,5 @@
 package com.example.android.architecture.blueprints.todoapp.di.component;
-
+import android.support.annotation.Nullable;
 import com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskActivity;
 import com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskContract;
 import com.example.android.architecture.blueprints.todoapp.di.ActivityScope;
@@ -20,7 +20,7 @@ public interface AddEditTaskComponent {
     @Subcomponent.Builder
     interface Builder {
         @BindsInstance
-        Builder taskId(String taskId);
+        Builder taskId(@Nullable String taskId);
 
         @BindsInstance
         Builder view(AddEditTaskContract.View view);
