@@ -20,7 +20,7 @@ public interface AddEditTaskComponent {
     @Subcomponent.Builder
     interface Builder {
         @BindsInstance
-        Builder taskId(String taskId);
+        Builder taskId(@Nullable String taskId);
 
         @BindsInstance
         Builder view(AddEditTaskContract.View view);
