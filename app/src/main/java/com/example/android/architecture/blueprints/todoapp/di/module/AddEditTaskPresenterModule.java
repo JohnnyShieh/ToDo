@@ -1,5 +1,5 @@
 package com.example.android.architecture.blueprints.todoapp.di.module;
-
+import android.support.annotation.Nullable;
 import com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskContract;
 import com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskPresenter;
 import com.example.android.architecture.blueprints.todoapp.data.source.TasksRepository;
@@ -16,7 +16,7 @@ public class AddEditTaskPresenterModule {
 
     @Provides
     @ActivityScope
-    AddEditTaskPresenter provideAddEditTaskPresenter(TasksRepository tasksRepository, String taskId,
+    AddEditTaskPresenter provideAddEditTaskPresenter(TasksRepository tasksRepository, @Nullable String taskId,
         AddEditTaskContract.View view, boolean isDataMissing) {
         return new AddEditTaskPresenter(taskId, tasksRepository, view, isDataMissing);
     }
